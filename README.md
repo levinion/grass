@@ -15,7 +15,7 @@
 ## 安装
 
 ```bash
-go install github.com/levinion/grass
+go install github.com/levinion/grass@latest
 ```
 
 ## 使用方法
@@ -46,6 +46,13 @@ grass stop <进程名称>
 通过以下命令启动指定的进程：
 ```
 grass start <进程名称> 
+```
+
+### 重新加载进程
+
+通过以下命令重新加载指定的进程：
+```
+grass reload <进程名称> 
 ```
 
 ### 移除进程管理
