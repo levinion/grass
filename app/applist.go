@@ -49,6 +49,12 @@ func (al *AppList) Start(name string) string{
 	return "ok"
 }
 
+func (al *AppList) Reload(name string) string{
+	al.list[name].Stop()
+	al.list[name].Start()
+	return "ok"
+}
+
 func (al *AppList) Show() string {
 
 	if len(al.list)==0{

@@ -47,6 +47,8 @@ func handleMsg(applist *app.AppList, msg *message.Msg, conn net.Conn) {
 		feedback = applist.Start(msg.Args)
 	case message.Show:
 		feedback = applist.Show()
+	case message.Reload:
+		feedback = applist.Reload(msg.Args)
 	}
 	sendFeedback(conn, feedback)
 }

@@ -13,9 +13,10 @@ const (
 	Stop
 	Start
 	Show
+	Reload
 )
 
-var SockAddr = filepath.Join(os.TempDir(), "github.com/levinion/grass.sock")
+var SockAddr = filepath.Join(os.TempDir(), "grass.sock")
 
 type Msg struct {
 	Command int

@@ -38,6 +38,12 @@ func main() {
 		}
 	})
 
+	flax.App("reload").Func(func(c *flax.Context) {
+		for _, v := range c.Args {
+			client.SendMsg(message.Reload, v)
+		}
+	})
+
 	flax.App("show").Func(func(c *flax.Context) {
 		client.SendMsg(message.Show, "")
 	})
